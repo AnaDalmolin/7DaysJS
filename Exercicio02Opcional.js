@@ -10,3 +10,4 @@ var resposta = prompt("Você gosta de estudar" + linguagem +"? Responda com o n�
         console.log("Ahh que pena... Já tentou aprender outras linguagens?")
     }
 
+//"node Exercicio02Opcional.js"
