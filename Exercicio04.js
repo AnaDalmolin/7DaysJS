@@ -4,6 +4,7 @@ const doces = [];
 const frutas = [];
 const congelado = [];
 const laticinio = [];
+const outros = [];
 
 
 var resposta = prompt("você deseja adicionar uma comida na sua lista de compras");
@@ -22,51 +23,65 @@ if(resposta === "sim"){
         congelado.push(comida)
     }else if(Lista === "laticinio"){
         laticinio.push(comida)
+    }else if(Lista === "outros"){
+        outros.push(comida)
     }
 }
 
 
-// // Crie um objeto para armazenar os itens da lista de compras por categoria
-// const listaDeCompras = {
-//     Frutas: [],
-//     Laticínios: [],
-//     Congelados: [],
-//     Doces: [],
-//     Outros: [],
-//   };
-  
-//   // Função para adicionar um item à lista de compras
-//   function adicionarItem() {
-//     const resposta = prompt("Deseja adicionar uma comida na sua lista de compras? (sim/não)");
-  
-//     if (resposta.toLowerCase() === "sim") {
-//       const comida = prompt("Digite o nome da comida:");
-//       const categoria = prompt("Em qual categoria essa comida se encaixa (Frutas, Laticínios, Congelados, Doces, Outros)?");
-  
-//       if (listaDeCompras[categoria]) {
-//         listaDeCompras[categoria].push(comida);
-//       } else {
-//         listaDeCompras.Outros.push(comida);
-//       }
-  
-//       adicionarItem(); // Chama a função novamente para adicionar mais itens
-//     } else {
-//       exibirListaDeCompras();
-//     }
-//   }
-  
-//   // Função para exibir a lista de compras agrupada por categoria
-//   function exibirListaDeCompras() {
-//     console.log("Lista de compras:");
-  
-//     for (const categoria in listaDeCompras) {
-//       const itens = listaDeCompras[categoria];
-  
-//       if (itens.length > 0) {
-//         console.log(`    ${categoria}: ${itens.join(', ')}`);
-//       }
-//     }
-//   }
-  
-//   // Iniciar o processo de adição de itens
-//   adicionarItem();
+console.log("###### LISTA DE COMPRAS ######")
+
+if(doces.length > 0){
+
+    console.log("Doces: ")
+    
+    for (let i = 0; i < doces.length; i++) {
+        
+        console.log(" -" + doces[i])
+        
+    }
+}
+
+if (frutas.length > 0) {
+    
+    console.log("Frutas: ")
+    
+    for (let i = 0; i < frutas.length; i++) {
+        
+        console.log(" -" + frutas[i])
+        
+    }
+}
+
+if(congelado.length > 0){
+
+    console.log("Congelados: ")
+    
+    for (let i = 0; i < congelado.length; i++) {
+        
+        console.log(" -" + congelado[i])
+        
+    }
+}
+
+if (laticinio.length > 0) {
+    
+    console.log("laticinio: ")
+    
+    for (let i = 0; i < laticinio.length; i++) {
+        
+        console.log(" -" + laticinio[i])
+        
+    }
+}
+
+if (outros.length > 0) {
+    
+    console.log("Outros: ")
+    
+    for (let i = 0; i < outros.length; i++) {
+        
+        console.log(" -" + outros[i])
+        
+    }
+}
