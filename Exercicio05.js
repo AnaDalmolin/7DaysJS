@@ -56,3 +56,44 @@ mostrarLista(laticinio, "Laticinio")
 
 mostrarLista(outros, "Outros")
 
+
+function removerItem(lista, item) {
+
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i] === item) {
+            lista.splice(lista[i], 1);
+        }else{
+            console.log("Item não existe na lista!")
+        }
+        
+    }    
+}
+
+
+if (doces.length === 0 && frutas.length === 0 && congelado.length === 0 && laticinio.length === 0 && outros.length === 0) {
+
+    console.log("Lista de compras está vazia");
+
+}else{
+
+    var resposta2 = prompt("você deseja remover algum dos itens de sua lista");
+
+    if (resposta2 === "sim") {
+
+        var listaRemove = prompt("Em qual das lista deseja remover?");
+        var itemRemove = prompt("E qual dos itens deseja remover?");
+
+        if(listaRemove === "doces"){
+            removerItem(doces, itemRemove)
+        }else if(listaRemove === "frutas"){
+            removerItem(frutas, itemRemove)
+        }else if(listaRemove === "congelados"){
+            removerItem(congelado, itemRemove)
+        }else if(listaRemove === "laticinio"){
+            removerItem(laticinio, itemRemove)
+        }else if(listaRemove === "outros"){
+            removerItem(outros, itemRemove)
+        }
+    }
+}
+
